@@ -75,3 +75,4 @@ If you wish to run the app directly via Maven without Docker for the application
 - `main` — stable production-ready code
 - `develop` — feature integration branch
 - `feature/*` — individual feature branches
+Webhook test: automatic Jenkins pipeline trigger.
