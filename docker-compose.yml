@@ -3,7 +3,6 @@ version: '3.8'
 services:
   mysql:
     image: mysql:8.0
-    container_name: ecomm-mysql
     environment:
       MYSQL_DATABASE: ecommjava
       MYSQL_ROOT_PASSWORD: root
@@ -20,8 +19,7 @@ services:
       - ecomm-net
 
   app:
-    build: .
-    container_name: ecomm-app
+    build:
     ports:
       - "8080:8080"
     environment:
