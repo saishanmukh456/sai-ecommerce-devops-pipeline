@@ -11,6 +11,7 @@ import com.ecomm.repository.CategoryRepository;
 import com.ecomm.repository.ProductRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Profile;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import java.math.BigDecimal;
 
@@ -22,6 +23,7 @@ public class EcommerceApplication {
     }
 
     @Bean
+    @Profile("!test")
     public CommandLineRunner dataLoader(CustomerRepository customerRepository, 
                                         CategoryRepository categoryRepository, 
                                         ProductRepository productRepository, 
